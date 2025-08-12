@@ -1,0 +1,155 @@
+.quality-page {
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.about-top-section {
+  position: relative;
+  width: 100vw;
+  height: 450px;
+  overflow: hidden;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.quality-top-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 450px;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.video-placeholder {
+  width: 100vw;
+  height: 350px;
+  background-color: #222;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.about-top-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.about-top-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-top-content {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-top-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.about-breadcrumb {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.about-breadcrumb span {
+  margin-right: 5px;
+}
+
+.quality-images-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.quality-images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.quality-image-box {
+  width: 100%;
+  max-width: 550px;
+
+  height: 600px;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+.quality-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.quality-image-box img:hover {
+  transform: scale(1.1);
+  filter: brightness(1) saturate(1.2);
+}
+
+@media (max-width: 768px) {
+  .about-top-content h1 {
+    font-size: 1.8rem;
+  }
+  .about-breadcrumb {
+    font-size: 0.9rem;
+  }
+  .quality-images-section {
+    padding: 20px 10px;
+  }
+  .quality-images-container {
+    grid-template-columns: 1fr;
+    gap: 20px 10px;
+  }
+  .quality-image-box {
+    max-width: 100%;
+    height: 700px;
+  }
+}

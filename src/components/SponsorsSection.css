@@ -1,0 +1,91 @@
+.sponsors-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #0f1f3d;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Prevent scrollbars on the section */
+}
+
+.sponsors-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.sponsors-section .highlight {
+  color: #d61818;
+}
+
+.sponsors-container-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Use full width */
+  overflow: hidden; /* Crucial for hiding cloned items */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-116px * 10)); /* (100px box + 16px gap) * 10 sponsors */
+  }
+}
+
+.sponsors-container {
+  display: flex;
+  /* Triple the width for seamless infinite scroll */
+  width: calc(116px * 30); /* (100px box + 16px margin) * 10 sponsors * 3 (for triple clone) */
+  animation: scroll 30s linear infinite;
+}
+
+.sponsors-container-wrapper:hover .sponsors-container {
+  animation-play-state: paused;
+}
+
+.sponsor-box {
+  flex: 0 0 100px;
+  height: 100px;
+  background-color: #ffffff;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  user-select: none;
+  cursor: default;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible;
+  margin: 0 8px; /* 1rem = 16px, so 8px on each side */
+}
+
+.sponsor-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.sponsor-box:hover {
+  transform: scale(2); /* Slightly less aggressive hover effect */
+  box-shadow: 
+    0 12px 24px rgba(0,0,0,0.4),
+    0 8px 8px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* The tilt effect is still handled by JS, so no need for hover on img */
+
+.scroll-btn {
+  display: none; /* Removed for now to simplify */
+}

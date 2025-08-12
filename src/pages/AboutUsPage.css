@@ -1,0 +1,340 @@
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 2px solid #0f3460;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-header p {
+  font-size: 1.5rem;
+  color: #b0b0b0;
+  margin-top: 0;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.about-section {
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #00d4ff;
+  border-bottom: 2px solid #0099cc;
+  padding-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.about-section ul li::before {
+  content: "▶";
+  color: #00d4ff;
+  position: absolute;
+  left: 0;
+}
+
+.industries-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.industries-list span {
+  background: rgba(0, 212, 255, 0.1);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.industries-list span:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.about-footer {
+  background: #0a0a0a;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #0f3460;
+}
+
+.about-footer p {
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.about-top-section {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.about-top-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-top-video {
+  position: absolute !important;
+  top: 62% !important;
+  left: 50% !important;
+  width: 100vw !important;
+  height: 350px !important;
+  transform: translate(-50%, -50%) !important;
+  object-fit: cover !important;
+  z-index: 1 !important;
+  filter: brightness(1) contrast(1) !important;
+  transition: box-shadow 0.3s ease !important;
+  cursor: default !important;
+}
+
+/* Add a subtle overlay on hover for better visual effect */
+/* Removed to disable blue overlay on hover */
+/* .about-top-section:hover .about-top-overlay {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 212, 255, 0.1) 0%,
+    rgba(108, 99, 255, 0.1) 100%
+  ) !important;
+} */
+
+.about-top-section .about-top-overlay {
+  transition: background 0.4s ease !important;
+}
+
+.about-top-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 2;
+}
+
+.about-top-content {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-top-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.about-breadcrumb {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.about-breadcrumb span {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+  }
+  
+  .about-section {
+    padding: 30px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-top-section {
+    height: 180px;
+  }
+  .about-top-container {
+    height: 180px;
+  }
+  .about-top-content h1 {
+    font-size: 1.8rem;
+  }
+  .about-breadcrumb {
+    font-size: 0.9rem;
+  }
+  .our-story-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .our-story-text, .our-story-image {
+    max-width: 100%;
+    flex: none;
+  }
+  .our-story-text h2 {
+    font-size: 2rem;
+  }
+  .our-story-image img {
+    height: auto;
+    max-width: 100%;
+  }
+  .about-page {
+    overflow-x: hidden;
+  }
+}
+
+/* Updated styles for Our Story section */
+.our-story-section {
+  padding: 60px 20px;
+  background: #fff;
+  color: #000;
+}
+
+.our-story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.our-story-image {
+  flex: 1 1 400px;
+  max-width: 400px;
+}
+
+.our-story-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.our-story-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.our-story-text {
+  flex: 1 1 600px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.our-story-text h3 {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.our-story-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.our-story-text h2 em {
+  font-style: italic;
+  color: #d32f2f;
+}
+
+.our-story-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-us-text {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .our-story-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-story-text, .our-story-image {
+    max-width: 100%;
+    flex: none;
+  }
+  .our-story-text h2 {
+    font-size: 2rem;
+  }
+}
+</edit_file>

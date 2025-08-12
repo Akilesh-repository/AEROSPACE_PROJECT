@@ -1,0 +1,145 @@
+/* Main Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(10, 25, 47, 0.85);
+  color: var(--white);
+  height: 120px;
+  border-bottom: 1px solid var(--navy-blue);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  
+  text-decoration: none;
+  line-height: 1;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  transition: none;
+}
+
+.navbar-logo:hover {
+  transform: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-logo img {
+  height: 48px;
+  display: block;
+}
+
+.diagonal-logo-wrapper {
+  background-color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  padding: 20px;
+  height: 120px;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.diagonal-logo-wrapper:hover {
+  background-color: rgb(255, 108, 108);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Hamburger menu button */
+.navbar-hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-left {
+    gap: 1rem;
+  }
+  .navbar-hamburger {
+    display: block;
+  }
+  .navbar-right {
+    display: none; /* Hide search bar on smaller screens */
+  }
+
+  .navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 999; /* Should be below navbar but above other content */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-buttons {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .navbar-buttons.open {
+    max-height: 500px; /* enough to show all menu items */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .diagonal-logo-wrapper {
+    width: 310px;
+    height: 80px;
+    padding: 10px;
+    max-width: 360px;
+  }
+}

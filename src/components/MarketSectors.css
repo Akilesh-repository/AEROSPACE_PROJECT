@@ -1,0 +1,31 @@
+.market-sectors {
+  background-color: #d61818; /* matching red */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  font-family: 'Arial', sans-serif;
+}
+
+.market-sectors h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.market-sectors-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.market-sectors-btn:hover {
+  background-color: white;
+  color: #d61818;
+}

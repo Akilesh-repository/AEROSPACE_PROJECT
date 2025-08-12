@@ -1,0 +1,91 @@
+.working-with-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.working-with-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.working-with-container {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+.working-with-card {
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  width: 280px;
+  height: 320px;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.working-with-image {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.working-with-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.working-with-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  z-index: 1;
+}
+
+.working-with-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.working-with-popup p {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.view-detail-btn {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-detail-btn:hover {
+  background-color: #d61818;
+}

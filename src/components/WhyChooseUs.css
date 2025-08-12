@@ -1,0 +1,234 @@
+.why-choose-us-section {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  margin: 4rem auto;
+  gap: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.left-content {
+  flex: 1;
+  background-color: #0f1f3d;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.left-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+.why-choose-us-text {
+  text-align: justify;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.features-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.features-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  
+  color: #ffffff;
+  font-weight: 900;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.features-list li:hover::before {
+  color: #d61818;
+}
+
+.right-content {
+  flex: 1;
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.top-left.red-block,
+.top-right.image-block,
+.bottom-left.video-block,
+.bottom-right.text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.red-block {
+  background-color: #d61818;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-radius: 12px 0 0 0;
+  cursor: default;
+  user-select: none;
+}
+
+.years-number {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.years-text {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.image-block {
+  background-color: #555;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 0 12px 0 0;
+  user-select: none;
+}
+
+.image-placeholder {
+  padding: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+.video-block {
+  background-color: #0f1f3d;
+  position: relative;
+  border-radius: 0 0 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-element {
+  width: 104.5%;
+  height: 108.3%;
+  object-fit: cover;
+  border-radius: 0 0 0 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.video-element:hover {
+  transform: scale(1);
+  z-index: 20;
+}
+
+.top-left.red-block,
+.top-right.image-block,
+.bottom-left.video-block,
+.bottom-right.text-block {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  border-radius: 0 0 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  background-color: #d61818;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px #d61818;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.text-block {
+  background-color: #0f1f3d;
+  color: white;
+  padding: 2rem;
+  border-radius: 0 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-block h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.text-block p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-choose-us-section {
+    flex-direction: column;
+  }
+  .right-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1rem;
+  }
+  .top-left.red-block,
+  .top-right.image-block,
+  .bottom-left.video-block,
+  .bottom-right.text-block {
+    min-width: auto;
+    min-height: auto;
+    border-radius: 12px;
+  }
+  .video-element:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,127 @@
+.trusted-factory-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5%;
+  gap: 3rem;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+.trusted-factory-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.trusted-factory-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 50px rgba(1, 2, 1, 5);
+}
+
+.trusted-factory-content {
+  max-width: 2600px;
+}
+
+.trusted-factory-our-story {
+  color: #d61818;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.trusted-factory-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.trusted-factory-title em {
+  font-style: italic;
+  color: #d61818;
+}
+
+.trusted-factory-message-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.trusted-factory-message {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  white-space: pre-line;
+}
+
+.trusted-factory-read-more {
+  background-color: #d61818;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.trusted-factory-read-more:hover {
+  background-color: #a31212;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .trusted-factory-section {
+    flex-direction: column;
+    padding: 1.5rem 3%;
+    gap: 1.5rem;
+  }
+  .trusted-factory-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .trusted-factory-content {
+    max-width: 100%;
+  }
+  .trusted-factory-title {
+    font-size: 2rem;
+  }
+  .trusted-factory-message-title {
+    font-size: 1.1rem;
+  }
+  .trusted-factory-message {
+    font-size: 0.95rem;
+  }
+  .trusted-factory-read-more {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trusted-factory-section {
+    padding: 1rem 2%;
+    gap: 1rem;
+  }
+  .trusted-factory-title {
+    font-size: 1.5rem;
+  }
+  .trusted-factory-message-title {
+    font-size: 1rem;
+  }
+  .trusted-factory-message {
+    font-size: 0.9rem;
+  }
+  .trusted-factory-read-more {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
